@@ -1,0 +1,48 @@
+name: Deploy companion to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack source for static build
+        run: unzip -q source-project.zip -d app
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: corepack enable
+        working-directory: app
+      - run: corepack prepare pnpm@11.25.0 --activate
+        working-directory: app
+      - run: pnpm install --frozen-lockfile
+        working-directory: app
+      - run: pnpm test
+        working-directory: app
+      - run: pnpm build
+        working-directory: app
+        env:
+          VITE_BASE_PATH: ${{ endsWith(github.event.repository.name, '.github.io') && '/' || format('/{0}/', github.event.repository.name) }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: app/dist
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
