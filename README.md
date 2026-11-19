@@ -25,7 +25,7 @@ pnpm build
 pnpm preview
 ```
 
-The detailed README and TESTS.md inside the archive document all rules, source precedence, DM questions, limitations, accessibility, save handling and the 16 requested validation cases. The local build and all 37 automated tests passed. The original app also passed 19 responsive browser scenarios; no physical iPhone installation test was performed.
+The detailed README and TESTS.md inside the archive document all rules, source precedence, DM questions, limitations, accessibility, save handling and the 16 requested validation cases. The local build and all 40 automated tests passed. The original app also passed 19 responsive browser scenarios; no physical iPhone installation test was performed.
 
 ## Publishing updates
 
@@ -49,6 +49,6 @@ Artwork supplied by the user. Savant and Savant: Expanded rules by laserllama; g
 
 ## Level 10
 
-Unrivaled Genius upgrades Potent Observation and Calculated Flourish. The fixed HP progression gives83 maximum HP,10d8 maximum Hit Dice and5 Hit Dice recovered per long rest. Magic-item save/escape DCs follow Huang Feng’s Intellect save DC (17 with the current build). The two-die Focus damage interpretation is configurable in DM settings. Existing level9 saves are validated, locally backed up and upgraded once without healing current HP or restoring spent item charges. See the detailed source README for migration and rule notes.
+Unrivaled Genius upgrades Potent Observation and Calculated Flourish. The fixed HP progression gives83 maximum HP,10d8 maximum Hit Dice and5 Hit Dice recovered per long rest. Magic-item save/escape DCs follow Huang Feng’s Intellect save DC (17 with the current build). Potent Observation against Focus rolls 2d8 and adds both results, with no DM interpretation toggle. Focus is always selectable for attacks and support even when its tracker has no name. Names are optional; a blank confirmed Focus is labelled Unnamed Focus. Existing level9 saves are validated, locally backed up and upgraded once without healing current HP or restoring spent item charges. See the detailed source README for migration and rule notes.
 
-This release passed37 unit/rendered-HTML checks and the production build. Browser interaction and physical iPhone checks were unavailable for this revision; earlier browser results are historical.
+This release passed40 unit/rendered-HTML checks and the production build. Browser interaction and physical iPhone checks were unavailable for this revision; earlier browser results are historical.

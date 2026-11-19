@@ -1,6 +1,12 @@
+# Current follow-up: summed damage and optional Focus names
+
+- Potent Observation against Focus always sums both d8s; a deterministic3+7 test returns10 with both dice kept. Its obsolete DM setting is removed and old v2 saves ignore it safely. Generic overlapping Intellect check bonuses still keep the highest.
+- Attack and Potent Observation Focus options remain enabled without a tracked name, including Flourish counterattacks. The Focus editor accepts a blank name and records Unnamed Focus on confirmation. Stored Focus is not automatically altered when choosing a roll target.
+-40 automated model/rendered-HTML tests and production build pass. Browser interaction checks remain unavailable in this chat.
+
 # Current release: level 10
 
-- 37 unit/rendered-HTML tests passed: exact level-10 stats (HP maximum 83, 10d8, PB +4, AC 20, DC 17), fixed saves/skills, rest recovery 5, both Focus-support dice rulings, non-Focus damage support, dynamic item DC overrides, save migration/backup/idempotence, export/import and unchanged dice/resource rules.
+- 40 unit/rendered-HTML tests passed: exact level-10 stats (HP maximum 83, 10d8, PB +4, AC 20, DC 17), fixed saves/skills, rest recovery 5, summed 2d8 Focus support, non-Focus damage support, dynamic item DC overrides, save migration/backup/idempotence, export/import and unchanged dice/resource rules.
 - Strict TypeScript compilation and the GitHub Pages production build passed.
 - Rendered React HTML confirms level-10 identity, Unrivaled Genius, matching card/dialog/equipment DCs, and absence of the prior level-9 restrictions. These are markup checks, not browser interaction checks.
 - Browser access was unavailable; new Flourish button flows, responsive visual checks, offline browsing and physical iPhone validation were not performed on this release. Publishing uses authenticated local Git. Deployment verification is recorded separately from these local checks.
