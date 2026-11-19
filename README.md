@@ -2,7 +2,7 @@
 
 [Open the character sheet](https://romanief.github.io/huang-feng-companion/)
 
-A one-page, offline-capable D&D 5e companion for Huang Feng (黄蜂), a level 9 Lightfoot Halfling Savant / Philosopher with the Spy background. It includes pixel artwork, real dice rolls, combat and Focus tracking, compact desktop popups, item resources, rests, notes and JSON backups.
+A one-page, offline-capable D&D 5e companion for Huang Feng (黄蜂), a level 10 Lightfoot Halfling Savant / Philosopher with the Spy background. It includes pixel artwork, real dice rolls, combat and Focus tracking, compact desktop popups, item resources, rests, notes and JSON backups.
 
 ## Source and local development
 
@@ -25,7 +25,7 @@ pnpm build
 pnpm preview
 ```
 
-The detailed README and TESTS.md inside the archive document all rules, source precedence, DM questions, limitations, accessibility, save handling and the 16 requested validation cases. The local build and all 32 unit tests passed. The original app also passed 19 responsive browser scenarios; no physical iPhone installation test was performed.
+The detailed README and TESTS.md inside the archive document all rules, source precedence, DM questions, limitations, accessibility, save handling and the 16 requested validation cases. The local build and all 37 automated tests passed. The original app also passed 19 responsive browser scenarios; no physical iPhone installation test was performed.
 
 ## Publishing updates
 
@@ -46,3 +46,9 @@ Open the Pages URL in Safari while online. Wait for **Offline ready**, then use 
 ## Attribution
 
 Artwork supplied by the user. Savant and Savant: Expanded rules by laserllama; game rules and fonts retain their respective ownership and licenses. Font license files and source notes are included in the archive. Original reference PDFs and campaign saves are not included.
+
+## Level 10
+
+Unrivaled Genius upgrades Potent Observation and Calculated Flourish. The fixed HP progression gives83 maximum HP,10d8 maximum Hit Dice and5 Hit Dice recovered per long rest. Magic-item save/escape DCs follow Huang Feng’s Intellect save DC (17 with the current build). The two-die Focus damage interpretation is configurable in DM settings. Existing level9 saves are validated, locally backed up and upgraded once without healing current HP or restoring spent item charges. See the detailed source README for migration and rule notes.
+
+This release passed37 unit/rendered-HTML checks and the production build. Browser interaction and physical iPhone checks were unavailable for this revision; earlier browser results are historical.

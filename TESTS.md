@@ -1,3 +1,13 @@
+# Current release: level 10
+
+- 37 unit/rendered-HTML tests passed: exact level-10 stats (HP maximum 83, 10d8, PB +4, AC 20, DC 17), fixed saves/skills, rest recovery 5, both Focus-support dice rulings, non-Focus damage support, dynamic item DC overrides, save migration/backup/idempotence, export/import and unchanged dice/resource rules.
+- Strict TypeScript compilation and the GitHub Pages production build passed.
+- Rendered React HTML confirms level-10 identity, Unrivaled Genius, matching card/dialog/equipment DCs, and absence of the prior level-9 restrictions. These are markup checks, not browser interaction checks.
+- Browser access was unavailable; new Flourish button flows, responsive visual checks, offline browsing and physical iPhone validation were not performed on this release. Publishing uses authenticated local Git. Deployment verification is recorded separately from these local checks.
+- Original reference PDFs were read only.
+
+The following is the historical verification record for earlier level-9 versions. Its HP/rest/schema expectations are not current release criteria.
+
 # Verification record
 
 Production source was checked with TypeScript strict compilation, 32 Node tests and 19 browser scenarios for the redesigned one-page pixel sheet. Browser results and timestamps are in `qa/browser-results.json`. Chrome ran in a separate temporary profile; deterministic dice inputs were injected only into that test browser.
@@ -42,3 +52,27 @@ The old page navigation was removed. Automated browser checks confirm one contin
 ## All desktop popups
 
 The shared popup treatment was extended to HP, all three rests, all three weapons, Words of Power, reactions, rope, tattoo, Help, conditions, history, Deduction and confirmations. Browser checks verified400px width, a620px maximum height, lower-right placement, access to the sheet behind the popup and no internal horizontal overflow. HP damage and healing both saved correctly. Switching from a rolled Dawn preview to Short Rest starts a fresh preview, and mobile HP remains a responsive modal. All19 browser scenarios passed on this revision; the rule/storage utility code was unchanged.
+
+## Streamlined targeting and stable portraits · 19 October 2026
+
+The latest build passed TypeScript compilation and all32 core tests. Eleven focused browser checks were performed through the rendered UI in an isolated localhost origin:
+
+- All six selected poses keep identical portrait/art slots, HP, stat, resource and vital-section bounds at1440×1100,390×844,320×568 and844×390. Gallery cards/art slots also match, with no horizontal overflow.
+- Initiative swaps to fighting art without changing those same bounds at all four sizes.
+- All four Words, all three reaction dialogs and Rope have no prerequisite confirmation checkboxes. Blank target fields leave use buttons available. Merely inspecting the cards spends nothing.
+- Blank Dread target rolls psychic damage and records an unnamed target effect. Blank Rope target records Restrained only after a marked failed save. Help accepts an unnamed ally.
+- Robes and Flourish spend the correct charges/reactions, enforce one reaction per event and retain their spent values after reload.
+
+The existing repeatable browser script was updated for the removed checkboxes and optional-field labels. Its complete historical19-scenario suite was not rerun for this revision. Current focused results are retained locally in `qa/streamlined-controls-results.json`. No physical iPhone/Safari test was performed.
+
+## Scroll rendering mitigation · 19 October 2026
+
+Replaced full-subtree CSS clipping and negative-layer backgrounds on the 41 card/stat/HP/ability frames with painted nine-slice SVG borders. Removed the sheet-wide isolated stacking context. Finished dice animations now release their transform/opacity effects. Pixel styling and box dimensions are retained. Phone Focus cards now stretch consistently to their column width.
+
+TypeScript and production build passed. Rendered UI checks covered repeated up/down scrolling at desktop and390×844, dice rolling while scrolling, release of completed dice transforms, phone card widths342px, no horizontal overflow, and the HP dialog at844×390. No blank cards or persistent flashes were observed in these checks. The reported intermittent flicker was not reliably reproduced before the change, so these checks cannot prove resolution on every browser/GPU. No physical iPhone/Safari test was performed. Game logic and storage were not changed.
+
+## Pixel cursors · 19 October 2026
+
+Added original32×32 cream/gold pixel arrow and hand SVGs as native CSS cursors, with standard cursor fallbacks and no pointer-following JavaScript. Fine-pointer/hover devices use the arrow on static text, the hand on controls and their child text/icons, the text cursor in editable text/number fields and notes, and not-allowed on disabled controls. Text remains selectable; touch controls and save data are unchanged.
+
+Production build passed. Rendered-browser computed-style checks passed for headings, initiative button text, disclosure summaries, journal textarea, HP number inputs and a disabled Deduction button. Browser-selected cursor assets are bundled into the stylesheet and available in the offline shell. No physical Safari pointer test was performed.
