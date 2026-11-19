@@ -1,3 +1,10 @@
+# Current release: Intelligence22 Tome benefit
+
+-44 automated model/rendered-HTML tests passed, including exact updated saves, AC21, initiative+8, DC18, INT skills/passive Investigation, Focus weapon totals and Robes+6 support.
+- Legacy saves migrate once to schema-v3 with a raw pre-Tome local backup. Deterministic tests confirm resources, notes, old rolls, current initiative and explicit fixed overrides are retained; an existing INT22 is not raised again and a higher score is not lowered. Later manual edits and JSON backups round-trip.
+- All item effect DCs continue to follow the character DC. Summed2d8 support and unnamed Focus choices remain available.
+- Production build passed. Browser interaction checks were unavailable; earlier records below are historical.
+
 # Current follow-up: summed damage and optional Focus names
 
 - Potent Observation against Focus always sums both d8s; a deterministic3+7 test returns10 with both dice kept. Its obsolete DM setting is removed and old v2 saves ignore it safely. Generic overlapping Intellect check bonuses still keep the highest.
