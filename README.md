@@ -25,7 +25,7 @@ pnpm build
 pnpm preview
 ```
 
-The detailed README and TESTS.md inside the archive document all rules, source precedence, DM questions, limitations, accessibility, save handling and the 16 requested validation cases. The local build and all 44 automated tests passed. The original app also passed 19 responsive browser scenarios; no physical iPhone installation test was performed.
+The detailed README and TESTS.md inside the archive document all rules, source precedence, DM questions, limitations, accessibility, save handling and the 16 requested validation cases. The local build and all 49 automated tests passed. The original app also passed 19 responsive browser scenarios; no physical iPhone installation test was performed.
 
 ## Publishing updates
 
@@ -51,8 +51,12 @@ Artwork supplied by the user. Savant and Savant: Expanded rules by laserllama; g
 
 Unrivaled Genius upgrades Potent Observation and Calculated Flourish. The fixed HP progression gives83 maximum HP,10d8 maximum Hit Dice and5 Hit Dice recovered per long rest. Magic-item save/escape DCs follow Huang Feng’s Intellect save DC (18 with the current build). Potent Observation against Focus rolls 2d8 and adds both results, with no DM interpretation toggle. Focus is always selectable for attacks and support even when its tracker has no name. Names are optional; a blank confirmed Focus is labelled Unnamed Focus. Existing level9 saves are validated, locally backed up and upgraded once without healing current HP or restoring spent item charges. See the detailed source README for migration and rule notes.
 
-This release passed44 unit/rendered-HTML checks and the production build. Browser interaction and physical iPhone checks were unavailable for this revision; earlier browser results are historical.
+This release passed49 unit/rendered-HTML checks and the production build. Browser interaction and physical iPhone checks were unavailable for this revision; earlier browser results are historical.
 
 ## Tome of Clear Thought
 
 The GM-approved benefit is applied: Intelligence22 (+6), maximum22. Current AC21, initiative+8, save/item DC18. Fixed saves: STR+5, DEX+8, CON+9, INT+16+d8, WIS+10+d8, CHA+5+d8. Focus rapier+12 to hit,1d8+8 before Studied Strike. Doctoral Robes support+6; its5-charge GM cap stays unchanged. Schema-v1/v2 saves are backed up and upgraded once to v3, preserving resources and old rolls; there is no repeatable Tome-use button.
+
+## Spiderbite Daggers
+
+The ordinary dagger is replaced with Spiderbite Daggers and a separate Off-hand Spiderbite bonus-action button. Main-hand Focus attacks:+10 /1d4+6; off-hand Focus attacks:+10 /1d4 (positive ability damage omitted). Both daggers must hit the same target on your turn to trigger the CON18 poison save: failure deals2d4 poison and Poisons until the end of the target’s next turn. The rapier does not count toward the pair trigger and needs GM approval for a non-light two-weapon pairing. Legacy saves migrate to schema-v4 with an automatic local backup, keeping resources and custom notes.49 automated tests, production build and focused browser checks passed at desktop/phone/landscape sizes.

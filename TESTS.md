@@ -1,3 +1,10 @@
+# Current release: Spiderbite Daggers
+
+-49 automated tests passed: main-hand/off-hand totals, negative ability modifier handling, poison2d4 and DC override, trigger guard, critical/Lucky separation, schema-v4 migration/backup/override mapping, and all prior rules/storage checks.
+- Production build passed.
+- Browser checks through the real UI passed on a separate localhost origin: unnamed-Focus off-hand+10 /1d4+0; Studied Strike adds its own d8 and marks used; no poison controls before confirming both dagger hits; failed CON18 save records Poisoned through end of target's next turn and rolls exactly two d4; success does not create another effect or damage roll; a main-hand critical uses two weapon d4; HP/ink/Robes/reactions unchanged.
+- Mobile390×844 and landscape844×390 dialogs fit without internal horizontal overflow. No physical iPhone test.
+
 # Current release: Intelligence22 Tome benefit
 
 -44 automated model/rendered-HTML tests passed, including exact updated saves, AC21, initiative+8, DC18, INT skills/passive Investigation, Focus weapon totals and Robes+6 support.
